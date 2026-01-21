@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Mail } from 'lucide-react';
-import logo from '@/assets/83eac87f396be9537beb5653e3439d645a384c47.png';
+import logo from '@/assets/logo.png';
+import logoPrr from '@/assets/logo-prr.png';
 
 export function Footer() {
   return (
@@ -110,35 +111,28 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Newsletter */}
+        {/* Newsletter and PRR Logo */}
         <div className="mt-12 pt-8 border-t border-white/20">
-          <div className="max-w-md">
-            <h4 className="font-bold text-lg mb-2">Receba novidades e conteúdos educativos da cresCER</h4>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="O seu email..."
-                className="flex-1 px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#4CAF50]"
-              />
-              <button className="px-6 py-2 bg-[#4CAF50] hover:bg-[#45a049] rounded-lg font-medium transition-colors">
-                Subscrever
-              </button>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="flex-1 max-w-md">
+              <h4 className="font-bold text-lg mb-3">Receba novidades e conteúdos educativos da cresCER</h4>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="O seu email..."
+                  className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:border-white transition-all shadow-sm hover:shadow-md"
+                />
+                <button className="px-6 py-3 bg-[#4CAF50] hover:bg-[#45a049] rounded-lg font-medium transition-colors shadow-sm hover:shadow-md whitespace-nowrap">
+                  Subscrever
+                </button>
+              </div>
+              <p className="text-xs opacity-75 mt-2">
+                Ao subscrever, aceita a nossa Política de Privacidade
+              </p>
             </div>
-            <p className="text-xs opacity-75 mt-2">
-              Ao subscrever, aceita a nossa Política de Privacidade
-            </p>
-          </div>
-        </div>
-
-        {/* PRR Logo */}
-        <div className="mt-8 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-center md:text-left">
-            <p className="text-sm opacity-90">
-              Projeto apoiado pelo Plano de Recuperação e Resiliência (PRR)
-            </p>
-          </div>
-          <div className="w-40 h-12 bg-white/20 rounded flex items-center justify-center">
-            <span className="text-xs font-bold">LOGO PRR</span>
+            <div className="flex items-center justify-center md:justify-end">
+              <img src={logoPrr} alt="PRR Logo" className="h-12 w-auto" />
+            </div>
           </div>
         </div>
 

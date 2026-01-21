@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Search, ShoppingCart, User, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import logo from '@/assets/83eac87f396be9537beb5653e3439d645a384c47.png';
+import logo from '@/assets/logo.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -136,9 +136,11 @@ export function Home() {
             <p className="text-gray-600">Conheça os materiais mais recentes da cresCER</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
             {newProducts.map((product) => (
-              <ProductCard key={product.id} {...product} />
+              <div key={product.id} className="w-full max-w-[280px] sm:w-[280px]">
+                <ProductCard {...product} />
+              </div>
             ))}
           </div>
 
@@ -165,9 +167,11 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
             {promoProducts.map((product) => (
-              <ProductCard key={product.id} {...product} />
+              <div key={product.id} className="w-full max-w-[300px] md:w-[300px]">
+                <ProductCard {...product} />
+              </div>
             ))}
           </div>
 
